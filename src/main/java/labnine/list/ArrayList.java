@@ -29,7 +29,7 @@ import java.util.NoSuchElementException;
 /**
  * Realization of a list by means of a dynamic array. This is a simplified version
  * of the java.util.ArrayList class. Please see the JavaDoc documentation and
- * the material in the textbook to learn more about how the data structures are
+ * the material in the textbook to learn more about how these data structures are
  * similar to and different from each other.
  *
  * @author Michael T. Goodrich
@@ -93,10 +93,11 @@ public class ArrayList<E> implements List<E> {
    * @throws IndexOutOfBoundsException if the index is negative or greater than size()-1
    */
   public E set(int index, E element) throws IndexOutOfBoundsException {
-    checkIndex(index, size);
-    E temp = data[index];
-    data[index] = element;
-    return temp;
+    // TODO: Implement a complete set method
+    // Reminder: please refer to code in textbook for helpful details
+    // Reminder: please refer to the course notes and slides for ideas
+    // Reminder: the "return null" is only a placeholder for this method
+    return null;
   }
 
   /**
@@ -217,22 +218,12 @@ public class ArrayList<E> implements List<E> {
    */
   @SuppressWarnings({"unchecked"})
   public boolean equals(Object list) {
-    if (list == null) {
-      return false;
-    }
-    if (getClass() != list.getClass()) {
-      return false;
-    }
-    ArrayList<?> other = (ArrayList)list;
-    if (size != other.size) {
-      return false;
-    }
-    for (int i = 0; i < size; i++) {
-      if (!this.get(i).equals(other.get(i))) {
-        return false;
-      }
-    }
-    return true;
+    // TODO: Implement a complete equals method
+    // Reminder: please refer to code in SinglyLinkedList for an example
+    // Reminder: please refer to code in textbook for helpful details
+    // Reminder: please refer to the course notes and slides for ideas
+    // Reminder: the "return false" is only a placeholder for this method
+    return false;
   }
 
   /**
@@ -242,15 +233,12 @@ public class ArrayList<E> implements List<E> {
    * @return textual representation of the array list
    */
   public String toString() {
-    StringBuilder sb = new StringBuilder("(");
-    for (int j = 0; j < size; j++) {
-      if (j > 0) {
-        sb.append(", ");
-      }
-      sb.append(data[j]);
-    }
-    sb.append(")");
-    return sb.toString();
+    // TODO: Implement a complete toString method
+    // Reminder: please refer to code in SinglyLinkedList for an example
+    // Reminder: please refer to code in textbook for helpful details
+    // Reminder: please refer to the course notes and slides for ideas
+    // Reminder: the "return null" is only a placeholder for this method
+    return null;
   }
 
   /**
@@ -267,8 +255,10 @@ public class ArrayList<E> implements List<E> {
     System.out.println();
     System.out.println("ArrayList after removing first element:\n" + list.toString());
     list.remove(8);
-    System.out.println();
-    System.out.println("ArrayList after removing last element:\n" + list.toString());
+    // TODO: add the remaining output statements to produce the required output
+    // Reminder: please refer to the assignment sheet on the course web site for
+    // a full example of the expected output for this method
+    // Reminder: don't forget to ensure that your methods pass all the tests!
   }
 
 }
